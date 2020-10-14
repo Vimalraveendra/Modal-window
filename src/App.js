@@ -5,6 +5,7 @@ import './App.css';
 const  App=()=> {
   const [isOpen,setIsOpen]=useState(false)
   const openWindow = () =>{
+    
     setIsOpen(!isOpen)
   }
   return (
@@ -14,7 +15,7 @@ const  App=()=> {
          
       </header>
       <button type='button' onClick={openWindow}>Delete</button>
-      <Dialog title={'Confirm'} subTitle={'Are you sure you want to delete ?'} isOpen={isOpen}/>
+      <Dialog title={'Confirm'} subTitle={'Are you sure you want to delete ?'} isOpen={isOpen} openWindow={openWindow}/>
     </div>
   );
 }
